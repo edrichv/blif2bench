@@ -5,9 +5,10 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 set(SOURCES
-    src/blif2bench.cpp
+    src/Blif2bench.cpp
     src/Log.cpp
     src/Blifparse.cpp
+    src/Str_cond.cpp
 )
 add_executable(${PROJECT_NAME} ${SOURCES})
 
