@@ -7,7 +7,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(SOURCES
     src/blif2bench.cpp
     src/Log.cpp
-    src/Gate.cpp
+    src/Blifparse.cpp
 )
 add_executable(${PROJECT_NAME} ${SOURCES})
 

@@ -1,11 +1,10 @@
 #pragma once
 #include<string>
+#include<vector>
 
-class Gate{
-private:
-    std::string classname = "Gate";
-public:
-    Gate();
-    std::string get_classname();
-};
-
+typedef struct Gate
+{
+    std::string gate_type;
+    std::vector<std::string> inputs;
+    std::vector<std::string> outputs;
+}Gate;
