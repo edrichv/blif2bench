@@ -1,10 +1,5 @@
 #include "../include/Str_cond.h"
 
-void strcond::reformat_line(std::string &line) {
-	strcond::trim_spaces(line);
-	strcond::to_upper_case(line);
-}
-
 void strcond::trim_spaces(std::string &line) {
 	std::stringstream ss;
 	char prevchar = ' ';
@@ -22,4 +17,16 @@ void strcond::trim_spaces(std::string &line) {
 }
 void strcond::to_upper_case(std::string &line) {
 	std::transform(line.begin(), line.end(), line.begin(), ::toupper);
+}
+void strcond::to_lower_case(std::string &line) {
+	std::transform(line.begin(), line.end(), line.begin(), ::tolower);
+}
+std::vector<std::string> strcond::split(std::string str, char delim){
+	std::vector<std::string> splitted;
+	std::stringstream ss(str);
+	std::string item;
+	while (std::getline(ss, item, delim)){
+		splitted.push_back(item);
+	}
+	return splitted;
 }

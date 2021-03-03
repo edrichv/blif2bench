@@ -9,6 +9,7 @@ set(SOURCES
     src/Log.cpp
     src/Blifparse.cpp
     src/Str_cond.cpp
+    src/Bliffile.cpp
 )
 add_executable(${PROJECT_NAME} ${SOURCES})
 

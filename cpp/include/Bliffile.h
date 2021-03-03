@@ -2,23 +2,24 @@
 #include<string>
 #include<vector>
 #include<unordered_map>
+#include "Str_cond.h"
+#include "toml++/toml.h"
+#include "Gate.h"
 
-class Blifile{
+class Bliffile{
 private:
     std::string path;
-    std::vector<std::string> config;
-    std::vector<std::string> gate_list;
+    toml::table config;
+    std::vector<Gate> gate_list;
     std::vector<std::string> inputs;
     std::vector<std::string> outputs;
     std::unordered_map<std::string, std::string> split_dict;
     std::vector<std::string> file_lines;
+    std::string model_name;
     void parse();
-    void condition(std::vector<std::string> &file_lines);
-   
+    void condition();
 public:
-    Blifile(std::string gate_type, 
-        std::vector<std::string> inputs, 
-        std::vector<std::string> output);
+    Bliffile(std::string path, toml::table config);
     std::vector<std::string> get_inputs();
     std::vector<std::string> get_outputs();
 };
