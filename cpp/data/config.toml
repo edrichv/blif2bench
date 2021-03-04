@@ -1,0 +1,15 @@
+[Files]
+# The working directory of the program
+work_dir = '/home/edrich/Documents/MEng2021/ksa4/'
+in_blif = 'ksa4_sfq.blif'
+out_bench = 'ksa4_sfq.bench'
+
+[BBGT]
+# BLIF -> BENCH Gate Translation
+
+# LSMITLL/ViPeR
+DFF = "buf"
+NOTT = "not"
+OR2T = "or"
+XOR2T = "xor"
+AND2T = "and"
