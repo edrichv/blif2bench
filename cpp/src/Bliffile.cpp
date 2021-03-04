@@ -10,6 +10,7 @@ Bliffile::Bliffile(std::string path, toml::table config){
     condition();
 	parse();
 }
+
 void Bliffile::parse(){
 	std::vector<std::string> component;
 	std::vector<std::string> g_in;
@@ -77,3 +78,13 @@ void Bliffile::condition(){
         file_lines[i] = line;
     }
 }
+
+// Getters
+
+std::vector<std::string> Bliffile::get_inputs(){return inputs;}
+std::vector<std::string> Bliffile::get_outputs(){return outputs;}
+std::string Bliffile::get_path(){return path;}
+std::vector<Gate> Bliffile::get_gate_list(){return gate_list;}
+std::unordered_map<std::string, std::string> Bliffile::get_split_dict(){return split_dict;}
+std::vector<std::string> Bliffile::get_file_lines(){return file_lines;}
+std::string Bliffile::get_model_name(){return model_name;}
