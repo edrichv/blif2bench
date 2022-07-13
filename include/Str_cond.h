@@ -2,6 +2,7 @@
 #include <string>
 #include <sstream>
 #include <algorithm>
+#include <vector>
 
 namespace strcond{
     void trim_spaces(std::string& line);
